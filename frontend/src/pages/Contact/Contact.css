@@ -1,0 +1,20 @@
+.email {
+    text-decoration: underline;
+}
+.email:hover {
+    color: var(--darkblue);
+}
+
+.socialmedia {
+    display: flex;
+    padding: 0;
+    gap: 1em;
+    
+}
+.socialmedia img {
+    width: 50px;
+}
+.socialmedia li {
+    list-style-type: none;
+}
+

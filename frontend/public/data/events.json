@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Busreis awakenings zaterdag",
+        "date": "17-05-2024",
+        "location": "Station Den Helder",
+        "time": "11:00 - 23:30",
+        "image": ["images/event1/awakenings.jpeg",
+                "images/event1/awakenings2.jpeg"
+        ],
+        "description": "Voor Awakenings Upclose Zaterdag organiseren wij een busrit vanaf station Den Helder, hou onze whatsappgroep in de gaten voor updates.",
+        "eventix": "https://shop.eventix.io/4ec12051-f4db-49e1-821b-2f696fdceed1/tickets?event=b22044e1-3b22-471c-a2d3-6caf59e89a5e",
+        "whatsapplink": "https://chat.whatsapp.com/BYd9LViXCUdI1SRRoKQ2sz"
+    },
+    {
+        "id": 2,
+        "name": "Busreis awakenings zondag",
+        "date": "18-05-2024",
+        "location": "Station Den Helder",
+        "time": "11:00 - 23:30",
+        "image": ["images/event2/verknipt.jpeg"
+        ],
+        "description": "Voor Awakenings Upclose Zondag organiseren wij een busrit vanaf station Den Helder, hou onze whatsappgroep in de gaten voor updates.",
+        "eventix": "https://shop.eventix.io/4ec12051-f4db-49e1-821b-2f696fdceed1/tickets?event=47498ec6-0e92-4e73-8636-a57aa6c49648"
+
+    }
+  ]

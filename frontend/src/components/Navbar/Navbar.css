@@ -1,0 +1,189 @@
+:root {
+    --bar-width: 35px;
+    --bar-height: 4px;
+    --hamburger-gap: 6px;
+    --foreground: rgb(24, 24, 24);
+    --background: white;
+    --hamburger-margin: 20px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --x-width: calc(var(--hamburger-height)  * 1.41421356237);
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+nav li a:hover {
+    color: #004AAD;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 99;
+    cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+    --foreground: white;
+    --background: #333;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before, 
+.hamburger-menu input, 
+.hamburger-menu::after {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: white;
+    transform-origin: left center;
+    transition: 
+    opacity var(--animation-timing), 
+    width var(--animation-timing), 
+    rotate var(--animation-timing), 
+    translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: .5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: var(--foreground);
+    color: var(--background);
+    max-width: 13rem;
+    height: 100%; 
+   
+    min-height: 100vh; 
+    top: 0;
+    position: absolute;
+    z-index: 98;
+}
+
+
+.hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
+}
+
+.dropdown-menu {
+    padding: 0 20px;
+}
+.dropdown-menu li {
+    margin: .2em 0;
+    
+}
+@media (min-width: 750px) {
+    .hamburger-menu::before, 
+    .hamburger-menu input, 
+    .hamburger-menu::after {
+        display: none;
+    }
+    .sidebar {
+        translate: 0;
+        padding: .5rem 1rem;
+        background: transparent;
+        max-width: 100%;
+        min-height: 0;
+        position:static;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .dropdown-toggle {
+        position: relative; 
+    }
+    .dropdown-menu {
+        display: none; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        background-color: var(--foreground); 
+        padding: 0.5rem;
+        list-style-type: none;
+        z-index: 1; 
+    }
+    .dropdown-toggle:focus + .dropdown-menu,
+    .dropdown-toggle:hover + .dropdown-menu,
+    .dropdown-menu:focus,
+    .dropdown-menu:hover {
+        display: block; 
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdown-menu {
+        top: 100%; 
+        left: 0; 
+        min-width: 100%; 
+    }
+    .dropdown-menu li {
+        width: 16em;
+        margin: .5em;
+    }
+
+}
+@media (min-width: 700px) {
+    .hamburger-menu, 
+    .sidebar {
+        transition: none;
+        /* Hiermee overbrug je de transition van 
+        groot naar klein scherm, door tussen 700 en 750px 
+        geen transition in te stellen. */
+    }
+}

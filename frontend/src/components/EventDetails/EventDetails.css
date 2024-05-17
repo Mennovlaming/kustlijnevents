@@ -1,0 +1,23 @@
+
+
+.details img {
+    width: 100%;
+    box-shadow: 2px 1px 7px rgba(43, 43, 43, 0.6);
+}
+
+hr {
+    margin: 2em 0;
+}
+
+.socials img  {
+    width: 52.5px;
+    height:52.5px;
+    box-shadow: none;
+    filter: drop-shadow(1px .5px 3px #333); 
+  }
+
+.join {
+    padding-bottom: 5em;
+    position: relative;
+}
+
