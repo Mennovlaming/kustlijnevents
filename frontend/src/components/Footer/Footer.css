@@ -1,25 +1,40 @@
 footer {
     background-color: #333;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2em;
-    
-
-    bottom: 0;
     width: 100%;
+    padding: 2em;
     
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
+footer img:not(.socials img) {
+    width: 50%;
+}
+.socials {
+    display: flex;
+    gap: 1em;
+}
+.socials img {
+    width: 33px;
+}
+li:not(.socials li) {
+    margin-bottom: 1em;
+}
+
 footer li {
     list-style-type: none;
     font-weight: 100;
     font-size: 14px;
-    margin-top: 5px;
+    
+}
+.mail li {
+    color: var(--lightblue);
 }
 footer li a {
-    color: white;
+    color: var(--lightblue);
 }
 
 footer li a:hover {
-    color: var(--lightblue);
+    color: var(--darkblue);
 }

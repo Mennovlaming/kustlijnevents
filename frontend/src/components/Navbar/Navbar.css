@@ -9,6 +9,8 @@
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     --x-width: calc(var(--hamburger-height)  * 1.41421356237);
 }
+
+
 nav ul {
     display: flex;
     flex-direction: column;
@@ -109,7 +111,14 @@ nav li a:hover {
     position: absolute;
     z-index: 98;
 }
-
+.logo {
+    width: 35%;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 1em;
+}
 
 .hamburger-menu:has(input:checked) + .sidebar {
     translate: 0;

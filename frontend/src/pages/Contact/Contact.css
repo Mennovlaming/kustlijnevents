@@ -5,16 +5,25 @@
     color: var(--darkblue);
 }
 
-.socialmedia {
+.contact {
+    background-color: var(--lightblue);
+    margin-top: 5em;
+    padding: 2em;
+}
+
+.contact p {
+    color:white;
+}
+
+.social {
+    margin-top: 2em;
+    color: white;
     display: flex;
-    padding: 0;
+    flex-direction: column;
     gap: 1em;
-    
 }
-.socialmedia img {
-    width: 50px;
-}
-.socialmedia li {
+.social li {
     list-style-type: none;
+
 }
 

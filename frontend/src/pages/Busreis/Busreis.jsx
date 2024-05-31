@@ -11,10 +11,13 @@ function Busreis() {
 
 
   return (
-    <div>
-      <h1>Vraag een busreis aan</h1>
-      <div id="form" style={{ width: '100%', height: '500px' }}></div>
-    </div>
+    <main className='content busreis'>
+      <div className='info'>
+        <h1>Busreis aanvragen</h1>
+        <p>Staat je busreis er niet tussen? Vraag via dit formulier een busreis aan voor je favoriete festival!</p>
+      </div>
+      <div id="form" style={{ width: '100%', height: '700px' }}></div>
+    </main>
   );
 }
 

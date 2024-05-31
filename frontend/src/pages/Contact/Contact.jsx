@@ -15,24 +15,24 @@ function Contact() {
  
     return (
 
-      <main className='content'>
-        <section>
-          <h2>Contact</h2>
-                
-                <a className="email" onClick={mailLink}><FontAwesomeIcon icon={faEnvelope} /> info@kustlijnevents.nl</a>
-                <p><FontAwesomeIcon icon={faPhone} /> 0612345679</p>
-                <p><FontAwesomeIcon icon={faHome} /> Robijn Reijntjesstraat 12</p>
-
-                <hr />
-
-                <p>Vind ons op social media!</p>
-                <ul className='socialmedia'>
-                  <li><Link to="https://chat.whatsapp.com/CUNgrOBQIIl7G7Jl2M0YGj"><img src="/images/socials/whatsapp.png" alt="" /></Link></li>
-                  <li><Link to="https://www.instagram.com/kustlijnevents?igsh=MXZmYWJoeDlhNnhxeA=="><img src="/images/socials/instagram.png" alt="" /></Link></li>
-                  <li><Link to="https://www.facebook.com/share/PRt57ejuzug7YAar/?mibextid=LQQJ4d"><img src="/images/socials/facebook.png" alt="" /></Link></li>
+      // <main className='content'>
+        <section className='contact'>
+          <h2>Kom in contact</h2>
+          <p>Heb je vragen? Stuur een mail of bericht ons op de socials</p>
+                <ul className='social'>
+                  <li><a className="email" onClick={mailLink}><FontAwesomeIcon icon={faEnvelope} /> info@kustlijnevents.nl</a></li>
+                  <li><p><FontAwesomeIcon icon={faPhone} /> 0612345679</p></li>
+                  <li><p><FontAwesomeIcon icon={faHome} /> Robijn Reijntjesstraat 12</p></li>
                 </ul>
+                
+                
+                
+
+          
+
+               
         </section>
-    </main>
+    // </main>
       
     );
 }

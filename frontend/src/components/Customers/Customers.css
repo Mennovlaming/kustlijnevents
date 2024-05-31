@@ -1,0 +1,28 @@
+.customers h2 {
+    padding: 1em 1em 0 1em;
+}
+
+.customers {
+    height: 50vh;
+    background-color: var(--lightblue);
+}
+
+.customer {
+    display: flex;
+    gap: 1em;
+
+    background-color: white;
+    outline: 1px solid #D9D9D9;
+    padding: 1em;
+    margin: 1em;
+}
+.customer img {
+    width: 55px;
+    height: 100%;
+}
+.customer p {
+    font-style: italic;
+}
+.customer h4 {
+    margin-bottom: 5px;
+}

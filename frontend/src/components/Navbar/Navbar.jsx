@@ -21,11 +21,15 @@ const Navbar = ({ events }) => {
 
     return (
         <>
+        <img className='logo' src="./images/logos/horizontaal.png" alt="" />
             <label className="hamburger-menu">
                 <input type="checkbox" />
             </label>
+            
             <aside className="sidebar">
+                
                 <nav>
+                    
                     <ul>
                         <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
                         <li className="dropdown">
