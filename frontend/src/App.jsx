@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Eventpage from './pages/Eventpage/Eventpage';
 import EventDetails from './components/EventDetails/EventDetails';
 import Home from './pages/Home/Home';
 import Overons from './pages/Overons/Overons';
@@ -35,6 +36,7 @@ function App() {
           <Navbar events={events}/>
           <Routes>
              <Route path='/' element={<Home events={events} />} />
+             <Route path='/Events' element={<Eventpage events={events} />} />
              <Route path='/event/:eventId' element={<EventDetails events={events} />} />
              <Route path='/Overons' element={<Overons />} />
              <Route path='/Busreis' element={<Busreis />} />

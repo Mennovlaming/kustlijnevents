@@ -9,7 +9,9 @@
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     --x-width: calc(var(--hamburger-height)  * 1.41421356237);
 }
-
+nav {
+    margin-top: 2em;
+}
 
 nav ul {
     display: flex;
@@ -131,7 +133,14 @@ nav li a:hover {
     margin: .2em 0;
     
 }
+
 @media (min-width: 750px) {
+    .logo {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15em;
+        
+    } 
     .hamburger-menu::before, 
     .hamburger-menu input, 
     .hamburger-menu::after {
@@ -139,11 +148,12 @@ nav li a:hover {
     }
     .sidebar {
         translate: 0;
-        padding: .5rem 1rem;
+        padding: 4em 1em 1em 1em;
         background: transparent;
         max-width: 100%;
         min-height: 0;
         position:static;
+
     }
     nav ul {
         display: flex;

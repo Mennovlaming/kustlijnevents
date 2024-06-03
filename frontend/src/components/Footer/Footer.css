@@ -9,7 +9,7 @@ footer {
     gap: 2em;
 }
 footer img:not(.socials img) {
-    width: 50%;
+    width: 15em;
 }
 .socials {
     display: flex;
@@ -37,4 +37,15 @@ footer li a {
 
 footer li a:hover {
     color: var(--darkblue);
+}
+
+@media (min-width: 750px) {
+    footer {
+        flex-direction: row;
+        justify-content: center;
+    }
+    footer img:not(.socials img) {
+        width: 10em;
+        height: 3em;
+    }
 }

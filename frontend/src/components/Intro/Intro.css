@@ -1,11 +1,11 @@
 .intro {
-    height: 90vh;
+    padding: 2em 0 4em 0;
     background-color: var(--lightblue);
     display: flex;
     flex-direction: column;
 }
 .intro img {
-    width: 50%;
+    width: 20em;
     padding: 1em;
 }
 
@@ -33,4 +33,11 @@
     background-color: white;
     color: #333;
     outline: 1px solid #333;
+}
+
+@media (min-width:1200px) {
+    .intro {
+        padding: 2em 8em 4em 8em;
+       
+    }
 }

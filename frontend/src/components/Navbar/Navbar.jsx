@@ -32,7 +32,8 @@ const Navbar = ({ events }) => {
                     
                     <ul>
                         <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-                        <li className="dropdown">
+                        <li><Link to="/Events" onClick={handleLinkClick}>Events</Link></li>
+                        {/* <li className="dropdown">
                             <div className="dropdown-toggle" onClick={toggleDropdown}>
                                 <a href='#' style={{ marginRight: '5px' }}>EVENTS</a>
                                 <FontAwesomeIcon icon={dropdownOpen ? faChevronUp : faChevronDown} />
@@ -46,7 +47,7 @@ const Navbar = ({ events }) => {
                                     ))}
                                 </ul>
                             )}
-                        </li>
+                        </li> */}
                         <li><Link to="https://shop.eventix.io/4ec12051-f4db-49e1-821b-2f696fdceed1/events" onClick={handleLinkClick}>Tickets</Link></li>
                         <li><Link to="/Overons" onClick={handleLinkClick}>Over ons</Link></li>
                         <li><Link to="/Busreis" onClick={handleLinkClick}>Busreis aanvragen</Link></li>

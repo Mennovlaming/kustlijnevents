@@ -26,3 +26,20 @@
 .customer h4 {
     margin-bottom: 5px;
 }
+
+
+@media (min-width:800px) {
+    .customers {
+        padding: 2em 8em 4em 8em;
+    }
+}
+@media (min-width:1100px) {
+    .customers {
+        padding: 2em 12em 4em 12em;
+    }
+}
+@media (min-width:1300px) {
+    .customers {
+        padding: 2em 21em 4em 12em;
+    }
+}
